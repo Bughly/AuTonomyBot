@@ -3,18 +3,20 @@ const bot = new Discord.Client();
 const configFile = require("./config.json");
 const COLOUR = configFile.colour;
 
-module.exports = class rules { // Change class name for new
+module.exports = class help { // Change class name for new
 
     constructor(){
-        this.name = "rules", // change these for new
-        this.alias = "r",
-        this.usage = ">rules"
+        this.name = "help", // change these for new
+        this.alias = "h",
+        this.usage = ">help"
     }
 
     run(bot, message, args) {
 
         let msgEmbed = new Discord.RichEmbed()
-             .addField(`AuTonomy Rules`,`1. Don't be a thot.\n2. No Jonah's allowed.\n3. Hope is a banned word.`)
+             .addField(`AuTonomy Bot Commands`,
+                 `Info: \t>info; Displays bot info\n
+                 Rules:\t>rules; Displays server rules\n`)
              .setThumbnail(bot.user.displayAvatarURL)
              .setColor(COLOUR);
 

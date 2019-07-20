@@ -1,5 +1,7 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+const configFile = require("./config.json");
+const COLOUR = configFile.colour;
 
 module.exports = class info {
 
@@ -13,7 +15,7 @@ module.exports = class info {
 
         let msgEmbed = new Discord.RichEmbed()
              .setDescription("AuTonomyBot Info")
-             .setColor("#1c0eb7")
+             .setColor(COLOUR)
              .setThumbnail(bot.user.displayAvatarURL)
              .addField("Name", bot.user.username)
              .addField("Joined", bot.user.createdAt);
