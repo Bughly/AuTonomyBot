@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const configFile = require("./config.json");
+const configFile = require("../config.json");
 const COLOUR = configFile.colour;
 
 module.exports = class rules { // Change class name for new

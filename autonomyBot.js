@@ -1,4 +1,4 @@
-const it pDiscord = require("discord.js");
+const Discord = require("discord.js");
 const bot = new Discord.Client();
 const tokenfile = require("../tokens.json");
 const configFile = require("./config.json");
@@ -22,7 +22,7 @@ bot.on("message", (message) => {
 
     if (message.author.bot) return;
 
-    if (message.toLowerCase().includes("how do i apply")) {
+    if (message.content.toLowerCase().includes("how do i apply")) {
         message.reply("Filler text");
     }
 
@@ -31,7 +31,7 @@ bot.on("message", (message) => {
 
     let cmd = CH.getCommand(command);
 
-    if (!cmd) retur n;
+    if (!cmd) return;
 
     try{
         cmd.run(bot, message, args.slice(1))
