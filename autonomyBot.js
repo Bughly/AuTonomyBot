@@ -26,6 +26,7 @@ bot.on("message", (message) => {
         message.reply("Filler text");
     }
 
+
     let args = message.content.split(" ");
     let command = args[0];
 
@@ -39,6 +40,15 @@ bot.on("message", (message) => {
         console.log(e);
     }
 
+})
+
+bot.on("message", (message) => {
+
+    if (message.author.bot) return;
+
+    if (message.content.toLowerCase().includes("lenny")) {
+      message.reply("( ͡° ͜ʖ ͡°)");
+    }
 })
 
 bot.login(tokenfile.AuTonomyBot);
