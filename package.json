@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.5.1",
-    "djs-commands": "^1.2.2"
+    "djs-commands": "^1.2.2",
+    "superagent": "^5.1.0"
   }
 }

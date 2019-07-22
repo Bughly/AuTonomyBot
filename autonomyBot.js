@@ -51,4 +51,13 @@ bot.on("message", (message) => {
     }
 })
 
+bot.on("message", (message) => {
+
+  if (message.author.bot) return;
+
+  if(message.content.toLowerCase().includes("heehee")) {
+    message.reply("Heehee!",  {files: ['https://www.washingtonpost.com/resizer/P76uukp4fUMM3JYJCikTilc0BGI=/1386x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/ZC4NIWYF3ZHE7B2B3JFYBCRDEE.jpg']})
+  }
+})
+
 bot.login(tokenfile.AuTonomyBot);
